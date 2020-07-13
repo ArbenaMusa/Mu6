@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Mu6
 //
-//  Created by Ornio on 11.7.20.
+//  Created by Arbena on 11.7.20.
 //  Copyright © 2020 am. All rights reserved.
 //
 
