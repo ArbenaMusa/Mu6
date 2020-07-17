@@ -18,11 +18,11 @@ Aplikacioni duhet të:
 - [x] Ketë më shumë se një view
 - [x] Mundësojë kalimin nga një view në tjetrën(at)
 - [x] Përmbajë navigim
-- [] Ketë disa kontrolla dhe të mundësojë nderveprim me ta
-- [] Ketë një table view me custom row design
-- [] Ketë të paktën klasa(modele)
-- [] Shfaq mesazhet e ndryshme si alert dialog
-- [] Ketë një databazë të brendshme
+- [x] Ketë disa kontrolla dhe të mundësojë nderveprim me ta
+- [x] Ketë një table view me custom row design
+- [x] Ketë të paktën klasa(modele)
+- [x] Shfaq mesazhet e ndryshme si alert dialog
+- [x] Ketë një databazë të brendshme
 
 ## Teknologjitë e përdorura
 
