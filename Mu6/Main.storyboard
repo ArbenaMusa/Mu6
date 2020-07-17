@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jkK-NR-X4Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jkK-NR-X4Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -15,14 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and have fun!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SG-RT-AOn">
-                                <rect key="frame" x="111.5" y="782.5" width="191" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpc-2w-YxD">
-                                <rect key="frame" x="126" y="721.5" width="162" height="51"/>
+                                <rect key="frame" x="126" y="711.5" width="162" height="51"/>
                                 <color key="backgroundColor" red="0.62842049870466321" green="0.11784047237969754" blue="0.29024770494453112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Play">
@@ -32,18 +26,32 @@
                                     <segue destination="7Y6-vm-nB8" kind="show" id="zOa-bq-IDk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeC-mg-N1f">
+                                <rect key="frame" x="111" y="770.5" width="192" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="Jfc-B8-s5F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="and have fun!">
+                                    <color key="titleColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VZ1-i8-vQ0" firstAttribute="bottom" secondItem="9SG-RT-AOn" secondAttribute="bottom" constant="40" id="9uJ-vZ-b6R"/>
+                            <constraint firstItem="xeC-mg-N1f" firstAttribute="leading" secondItem="VZ1-i8-vQ0" secondAttribute="leading" constant="111" id="2fH-aS-S16"/>
+                            <constraint firstItem="xeC-mg-N1f" firstAttribute="top" secondItem="kpc-2w-YxD" secondAttribute="bottom" constant="8" id="7hF-Ed-lGP"/>
                             <constraint firstItem="kpc-2w-YxD" firstAttribute="leading" secondItem="VZ1-i8-vQ0" secondAttribute="leading" constant="126" id="Dts-VN-5RB"/>
                             <constraint firstItem="kpc-2w-YxD" firstAttribute="centerX" secondItem="GmG-nO-fzx" secondAttribute="centerX" id="KHB-PT-TTI"/>
-                            <constraint firstItem="9SG-RT-AOn" firstAttribute="top" secondItem="kpc-2w-YxD" secondAttribute="bottom" constant="10" id="ODp-RK-o2p"/>
-                            <constraint firstItem="kpc-2w-YxD" firstAttribute="centerX" secondItem="9SG-RT-AOn" secondAttribute="centerX" id="uXw-uv-fJy"/>
+                            <constraint firstItem="xeC-mg-N1f" firstAttribute="top" secondItem="kpc-2w-YxD" secondAttribute="bottom" constant="8" id="Wn8-be-1qD"/>
+                            <constraint firstItem="VZ1-i8-vQ0" firstAttribute="bottom" secondItem="xeC-mg-N1f" secondAttribute="bottom" constant="39.5" id="a6d-La-QSF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VZ1-i8-vQ0"/>
                     </view>
                     <navigationItem key="navigationItem" id="taj-qj-HF8"/>
+                    <connections>
+                        <outlet property="showAlertButton" destination="xeC-mg-N1f" id="ktK-lF-am9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cye-IQ-tnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
