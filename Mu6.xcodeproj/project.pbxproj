@@ -13,6 +13,7 @@
 		F40FC11224BCCB5B00E08094 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC11124BCCB5B00E08094 /* ScoresViewController.swift */; };
 		F40FC11424BCCB6A00E08094 /* BestScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40FC11324BCCB6A00E08094 /* BestScoresViewController.swift */; };
 		F4C61EA224C1B878004AE840 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C61EA124C1B878004AE840 /* NoteModel.swift */; };
+		F4FB45ED24C1DBA30094AACB /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4FB45EC24C1DBA30094AACB /* History.storyboard */; };
 		FC35981424C0E3CF00210B92 /* VCSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35981324C0E3CF00210B92 /* VCSwiftUIView.swift */; };
 		FCFEC9DD24BA228900795ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC9DC24BA228900795ADC /* AppDelegate.swift */; };
 		FCFEC9DF24BA228900795ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */; };
@@ -28,6 +29,7 @@
 		F40FC11124BCCB5B00E08094 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		F40FC11324BCCB6A00E08094 /* BestScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestScoresViewController.swift; sourceTree = "<group>"; };
 		F4C61EA124C1B878004AE840 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		F4FB45EC24C1DBA30094AACB /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		FC35981324C0E3CF00210B92 /* VCSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSwiftUIView.swift; sourceTree = "<group>"; };
 		FCFEC9D924BA228900795ADC /* Mu6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mu6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFEC9DC24BA228900795ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4FB45EB24C1DB770094AACB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F40FC10F24BCBAFD00E08094 /* Main.storyboard */,
+				F4FB45EC24C1DBA30094AACB /* History.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		FCFEC9D024BA228900795ADC = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +79,7 @@
 		FCFEC9DB24BA228900795ADC /* Mu6 */ = {
 			isa = PBXGroup;
 			children = (
+				F4FB45EB24C1DB770094AACB /* Storyboards */,
 				FCFEC9DC24BA228900795ADC /* AppDelegate.swift */,
 				FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */,
 				FCFEC9E024BA228900795ADC /* ContentView.swift */,
@@ -77,7 +89,6 @@
 				F40FC11124BCCB5B00E08094 /* ScoresViewController.swift */,
 				F40FC11324BCCB6A00E08094 /* BestScoresViewController.swift */,
 				FCFEC9E224BA228A00795ADC /* Assets.xcassets */,
-				F40FC10F24BCBAFD00E08094 /* Main.storyboard */,
 				FCFEC9EA24BA228A00795ADC /* Info.plist */,
 				FCFEC9E424BA228A00795ADC /* Preview Content */,
 				F4C61EA124C1B878004AE840 /* NoteModel.swift */,
@@ -154,6 +165,7 @@
 				FCFEC9E624BA228A00795ADC /* Preview Assets.xcassets in Resources */,
 				FCFEC9E324BA228A00795ADC /* Assets.xcassets in Resources */,
 				F40FC11024BCBAFD00E08094 /* Main.storyboard in Resources */,
+				F4FB45ED24C1DBA30094AACB /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

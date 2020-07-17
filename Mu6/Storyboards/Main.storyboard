@@ -117,7 +117,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gko-48-xpS" kind="show" id="RxV-eh-EA9"/>
+                                    <segue destination="Pom-G8-S8p" kind="show" id="lfF-2z-bmS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wud-3j-dNz">
@@ -159,7 +159,7 @@
             <objects>
                 <viewController id="6h2-D9-cNg" customClass="ScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7h1-Th-K6s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,7 +176,7 @@
             <objects>
                 <viewController interfaceStyle="dark" id="Pg2-BJ-IO6" customClass="BestScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R7r-G3-vfP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -188,26 +188,15 @@
             </objects>
             <point key="canvasLocation" x="2380" y="868"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Uxf-fA-bQg">
+        <!--Storyboard Reference-->
+        <scene sceneID="gPV-aO-cxT">
             <objects>
-                <tabBarController interfaceStyle="dark" id="Gko-48-xpS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="LJd-OP-Xsg"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="wYT-Tz-amB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Pg2-BJ-IO6" kind="relationship" relationship="viewControllers" id="eOD-ch-H19"/>
-                        <segue destination="6h2-D9-cNg" kind="relationship" relationship="viewControllers" id="6xv-eM-0K0"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iWi-VQ-Fd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder id="Pom-G8-S8p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Tnq-5S-99A"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TGk-TR-P3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="140"/>
+            <point key="canvasLocation" x="2582" y="140"/>
         </scene>
     </scenes>
     <resources>
