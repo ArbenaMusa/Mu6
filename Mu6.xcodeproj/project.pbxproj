@@ -60,6 +60,26 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		F4FB45EE24C1E0830094AACB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F40FC11324BCCB6A00E08094 /* BestScoresViewController.swift */,
+				F40FC11124BCCB5B00E08094 /* ScoresViewController.swift */,
+				F40FC10D24BCBAE400E08094 /* PlayViewController.swift */,
+				F40FC10B24BCBA9400E08094 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4FB45EF24C1E0D00094AACB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4C61EA124C1B878004AE840 /* NoteModel.swift */,
+			);
+			name = Models;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		FCFEC9D024BA228900795ADC = {
 			isa = PBXGroup;
 			children = (
@@ -79,19 +99,16 @@
 		FCFEC9DB24BA228900795ADC /* Mu6 */ = {
 			isa = PBXGroup;
 			children = (
+				F4FB45EF24C1E0D00094AACB /* Models */,
+				F4FB45EE24C1E0830094AACB /* ViewControllers */,
 				F4FB45EB24C1DB770094AACB /* Storyboards */,
 				FCFEC9DC24BA228900795ADC /* AppDelegate.swift */,
 				FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */,
 				FCFEC9E024BA228900795ADC /* ContentView.swift */,
 				FC35981324C0E3CF00210B92 /* VCSwiftUIView.swift */,
-				F40FC10B24BCBA9400E08094 /* MainViewController.swift */,
-				F40FC10D24BCBAE400E08094 /* PlayViewController.swift */,
-				F40FC11124BCCB5B00E08094 /* ScoresViewController.swift */,
-				F40FC11324BCCB6A00E08094 /* BestScoresViewController.swift */,
 				FCFEC9E224BA228A00795ADC /* Assets.xcassets */,
 				FCFEC9EA24BA228A00795ADC /* Info.plist */,
 				FCFEC9E424BA228A00795ADC /* Preview Content */,
-				F4C61EA124C1B878004AE840 /* NoteModel.swift */,
 			);
 			path = Mu6;
 			sourceTree = "<group>";

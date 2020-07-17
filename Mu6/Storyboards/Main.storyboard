@@ -154,40 +154,6 @@
             </objects>
             <point key="canvasLocation" x="2009" y="140"/>
         </scene>
-        <!--Best score-->
-        <scene sceneID="44U-hD-tFg">
-            <objects>
-                <viewController id="6h2-D9-cNg" customClass="ScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7h1-Th-K6s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="mGL-pA-lEV"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Best score" id="jL8-tx-OGw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ai5-iD-hqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3142" y="868"/>
-        </scene>
-        <!--Score table-->
-        <scene sceneID="EJt-DA-L8X">
-            <objects>
-                <viewController interfaceStyle="dark" id="Pg2-BJ-IO6" customClass="BestScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="R7r-G3-vfP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bef-Ws-UoE"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Score table" id="YgU-Xv-ShH"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ad-zY-jS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2380" y="868"/>
-        </scene>
         <!--Storyboard Reference-->
         <scene sceneID="gPV-aO-cxT">
             <objects>
