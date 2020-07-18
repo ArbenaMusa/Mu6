@@ -11,6 +11,7 @@ import Speech
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var answerBtn: UIButton!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -25,6 +26,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         levelLabel.text = labelText
+        randomImagePicker(resource: "SolNotesList")
         
         answerBtn.isEnabled = false  //2
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
@@ -66,6 +68,7 @@ class GameViewController: UIViewController {
             answerBtn.isEnabled = false
             answerBtn.setTitle("Answer", for: .normal)
             answerLabel.text = ""
+            randomImagePicker(resource: "SolNotesList")
         } else {
             startRecording()
             answerBtn.setTitle("Submit", for: .normal)
@@ -140,6 +143,15 @@ class GameViewController: UIViewController {
         } else {
             answerBtn.isEnabled = false
         }
+    }
+
+    func randomImagePicker(resource: String){
+        let path = Bundle.main.path(forResource: resource, ofType: "plist")
+        let dictionary = NSDictionary(contentsOfFile: path!)
+        
+        let data = dictionary?.object(forKey: "Images") as! [String]
+        
+        imageView.image = UIImage(named: data.randomElement()!)
     }
 
     /*

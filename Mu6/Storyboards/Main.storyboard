@@ -200,8 +200,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="fkX-ho-0LR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkX-ho-0LR">
                                 <rect key="frame" x="20" y="104" width="374" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="2Mo-Li-PHf"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRE-0g-4hg">
                                 <rect key="frame" x="148" y="718" width="118" height="54"/>
@@ -282,6 +285,7 @@
                     <connections>
                         <outlet property="answerBtn" destination="Xc4-xY-5Y2" id="baS-lA-vg1"/>
                         <outlet property="answerLabel" destination="Sk2-MB-e7D" id="MST-r5-jZz"/>
+                        <outlet property="imageView" destination="fkX-ho-0LR" id="g3E-2k-nMX"/>
                         <outlet property="levelLabel" destination="N2F-Cb-XIT" id="Byw-79-eL5"/>
                     </connections>
                 </viewController>
@@ -291,10 +295,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="V8D-ag-YOr"/>
+        <segue reference="seu-eq-Kdr"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="A" width="720" height="221"/>
         <image name="music.mic" catalog="system" width="128" height="118"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
     </resources>
