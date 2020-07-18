@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         levelLabel.text = labelText
-        randomImagePicker(resource: "SolNotesList")
+        callRandom(level: labelText)
         
         answerBtn.isEnabled = false  //2
         speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
@@ -68,7 +68,7 @@ class GameViewController: UIViewController {
             answerBtn.isEnabled = false
             answerBtn.setTitle("Answer", for: .normal)
             answerLabel.text = ""
-            randomImagePicker(resource: "SolNotesList")
+            callRandom(level: labelText)
         } else {
             startRecording()
             answerBtn.setTitle("Submit", for: .normal)
@@ -152,6 +152,15 @@ class GameViewController: UIViewController {
         let data = dictionary?.object(forKey: "Images") as! [String]
         
         imageView.image = UIImage(named: data.randomElement()!)
+    }
+    
+    func callRandom(level: String){
+        if level == "Level 1"{
+            randomImagePicker(resource: "SolNotesList")
+        }
+        else if level == "Level 2"{
+            randomImagePicker(resource: "BassNotesList")
+        }
     }
 
     /*
