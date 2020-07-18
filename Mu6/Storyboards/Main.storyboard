@@ -98,6 +98,9 @@
                                 </segments>
                                 <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="7Y6-vm-nB8" eventType="valueChanged" id="ZEl-el-B70"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ld-8x-9Na">
                                 <rect key="frame" x="191" y="574" width="0.0" height="0.0"/>
@@ -141,7 +144,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="86y-FK-9lZ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2xc-hr-6TF"/>
+                                    <segue destination="86y-FK-9lZ" kind="presentation" identifier="game" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="2xc-hr-6TF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -229,12 +232,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2F-Cb-XIT">
+                                <rect key="frame" x="114.5" y="658" width="185" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PhX-a5-695" firstAttribute="bottom" secondItem="wRE-0g-4hg" secondAttribute="bottom" constant="90" id="2Gm-7P-ycd"/>
                             <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="Sk2-MB-e7D" secondAttribute="trailing" constant="70" id="3Uw-9r-z0P"/>
                             <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="wRE-0g-4hg" secondAttribute="trailing" constant="148" id="3q9-Ib-fVf"/>
+                            <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="N2F-Cb-XIT" secondAttribute="trailing" constant="114.5" id="5B6-XW-bNj"/>
                             <constraint firstItem="Xc4-xY-5Y2" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="139" id="8BE-Fm-Wn5"/>
                             <constraint firstItem="wRE-0g-4hg" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="148" id="AAe-8L-n94"/>
                             <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="Xc4-xY-5Y2" secondAttribute="trailing" constant="139" id="JyX-Dc-nhA"/>
@@ -243,7 +253,9 @@
                             <constraint firstItem="Sk2-MB-e7D" firstAttribute="top" secondItem="qxs-Lw-tkH" secondAttribute="bottom" constant="20" id="Sq6-OC-8V3"/>
                             <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="fkX-ho-0LR" secondAttribute="trailing" constant="20" id="Vux-IP-O7q"/>
                             <constraint firstItem="Xc4-xY-5Y2" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="139" id="ZXs-19-MKN"/>
+                            <constraint firstItem="wRE-0g-4hg" firstAttribute="top" secondItem="N2F-Cb-XIT" secondAttribute="bottom" constant="30" id="bh6-ml-Via"/>
                             <constraint firstItem="Xc4-xY-5Y2" firstAttribute="top" secondItem="Sk2-MB-e7D" secondAttribute="bottom" constant="30" id="fGz-W2-XVV"/>
+                            <constraint firstItem="N2F-Cb-XIT" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="114.5" id="gr9-b0-zuO"/>
                             <constraint firstItem="Sk2-MB-e7D" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="70" id="gtN-C7-8Nl"/>
                             <constraint firstItem="PhX-a5-695" firstAttribute="trailing" secondItem="qxs-Lw-tkH" secondAttribute="trailing" constant="70" id="qBI-ON-q5C"/>
                             <constraint firstItem="qxs-Lw-tkH" firstAttribute="leading" secondItem="PhX-a5-695" secondAttribute="leading" constant="70" id="ubk-yy-DRS"/>
@@ -252,6 +264,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PhX-a5-695"/>
                     </view>
+                    <connections>
+                        <outlet property="levelLabel" destination="N2F-Cb-XIT" id="Byw-79-eL5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dip-9G-gWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

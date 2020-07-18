@@ -10,8 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var levelLabel: UILabel!
+    var labelText = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        levelLabel.text = labelText
 
         // Do any additional setup after loading the view.
     }
