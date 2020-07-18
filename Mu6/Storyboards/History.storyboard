@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YD0-ec-7f0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YD0-ec-7f0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,39 +7,150 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Score Table-->
+        <!--Best Scores-->
         <scene sceneID="hiY-n9-djh">
             <objects>
-                <viewController id="ZFr-E0-RLv" customClass="ScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZFr-E0-RLv" userLabel="Best Scores" customClass="BestScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zhX-no-67z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2Z-ZD-3E2">
+                                <rect key="frame" x="10" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QkL-F1-HxG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="SE4-Oj-fMf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highScores" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tc5-6d-QH9">
+                                <rect key="frame" x="13" y="154" width="388" height="360"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No high scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnL-yy-xSO">
+                                <rect key="frame" x="53.5" y="534" width="307" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qnL-yy-xSO" firstAttribute="leading" secondItem="u8c-fA-VBE" secondAttribute="leading" constant="53.5" id="3LU-mj-bqN"/>
+                            <constraint firstItem="g2Z-ZD-3E2" firstAttribute="leading" secondItem="u8c-fA-VBE" secondAttribute="leading" constant="10" id="CPT-Cy-HXh"/>
+                            <constraint firstItem="u8c-fA-VBE" firstAttribute="trailing" secondItem="qnL-yy-xSO" secondAttribute="trailing" constant="53.5" id="FbZ-8c-iK7"/>
+                            <constraint firstItem="Tc5-6d-QH9" firstAttribute="top" secondItem="g2Z-ZD-3E2" secondAttribute="bottom" constant="80" id="H9v-JD-nlS"/>
+                            <constraint firstItem="u8c-fA-VBE" firstAttribute="trailing" secondItem="Tc5-6d-QH9" secondAttribute="trailing" constant="13" id="O0e-q4-AyC"/>
+                            <constraint firstItem="Tc5-6d-QH9" firstAttribute="leading" secondItem="u8c-fA-VBE" secondAttribute="leading" constant="13" id="OHh-kI-pHf"/>
+                            <constraint firstItem="g2Z-ZD-3E2" firstAttribute="top" secondItem="u8c-fA-VBE" secondAttribute="top" id="Znb-Ui-6Ju"/>
+                            <constraint firstItem="qnL-yy-xSO" firstAttribute="top" secondItem="Tc5-6d-QH9" secondAttribute="bottom" constant="20" id="gXf-wd-5c2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u8c-fA-VBE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Score Table" id="dkq-CU-3b8"/>
+                    <tabBarItem key="tabBarItem" title="Best Scores" image="star" catalog="system" id="dkq-CU-3b8">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-Ck-csN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-671" y="546"/>
+            <point key="canvasLocation" x="73.913043478260875" y="553.125"/>
         </scene>
-        <!--Best Scores-->
+        <!--Main-->
+        <scene sceneID="p6y-hE-at2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="QkL-F1-HxG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKB-8d-0wk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="1001"/>
+        </scene>
+        <!--Score Table-->
         <scene sceneID="TBU-re-6zg">
             <objects>
-                <viewController id="ahq-Mr-yXv" customClass="BestScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ahq-Mr-yXv" userLabel="Score Table" customClass="ScoresViewController" customModule="Mu6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WCp-bt-nzg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rz8-Xh-eEi">
+                                <rect key="frame" x="10" y="44" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QkL-F1-HxG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="IZ2-ZT-TT9"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LoV-GL-ls2">
+                                <rect key="frame" x="10" y="84" width="394" height="719"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="separatorColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreCell" rowHeight="70" id="KAC-M0-zfr" customClass="ScoreCell" customModule="Mu6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KAC-M0-zfr" id="xK0-Wa-pVf">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oQb-d8-TUe">
+                                                    <rect key="frame" x="20" y="19.5" width="43" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="R78-u4-FiH"/>
+                                                        <constraint firstAttribute="width" constant="43" id="um0-lJ-dIr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DX-qE-mfJ">
+                                                    <rect key="frame" x="83" y="20" width="291" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="t2h-gA-I1r"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="9DX-qE-mfJ" firstAttribute="leading" secondItem="oQb-d8-TUe" secondAttribute="trailing" constant="20" id="DBQ-dZ-Wmu"/>
+                                                <constraint firstItem="9DX-qE-mfJ" firstAttribute="centerY" secondItem="xK0-Wa-pVf" secondAttribute="centerY" id="GWp-Fg-bCL"/>
+                                                <constraint firstItem="oQb-d8-TUe" firstAttribute="centerY" secondItem="xK0-Wa-pVf" secondAttribute="centerY" id="ObQ-lz-QA0"/>
+                                                <constraint firstAttribute="trailing" secondItem="9DX-qE-mfJ" secondAttribute="trailing" constant="20" id="dYD-qO-uFQ"/>
+                                                <constraint firstItem="9DX-qE-mfJ" firstAttribute="centerY" secondItem="oQb-d8-TUe" secondAttribute="centerY" id="dj1-Ig-Sew"/>
+                                                <constraint firstItem="oQb-d8-TUe" firstAttribute="leading" secondItem="xK0-Wa-pVf" secondAttribute="leadingMargin" id="qLu-tV-Pfh"/>
+                                                <constraint firstItem="oQb-d8-TUe" firstAttribute="centerY" secondItem="xK0-Wa-pVf" secondAttribute="centerY" id="tSL-j4-EW3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="scoreLabel" destination="9DX-qE-mfJ" id="kP3-sl-IDY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LoV-GL-ls2" firstAttribute="top" secondItem="Rz8-Xh-eEi" secondAttribute="bottom" constant="10" id="Vs6-8v-53I"/>
+                            <constraint firstItem="Rz8-Xh-eEi" firstAttribute="leading" secondItem="4N2-ci-SVx" secondAttribute="leading" constant="10" id="XYQ-GM-XPa"/>
+                            <constraint firstItem="Rz8-Xh-eEi" firstAttribute="top" secondItem="4N2-ci-SVx" secondAttribute="top" id="Z58-Nf-g8f"/>
+                            <constraint firstItem="4N2-ci-SVx" firstAttribute="bottom" secondItem="LoV-GL-ls2" secondAttribute="bottom" constant="10" id="b49-IN-sJJ"/>
+                            <constraint firstItem="4N2-ci-SVx" firstAttribute="trailing" secondItem="LoV-GL-ls2" secondAttribute="trailing" constant="10" id="dGC-Ox-TMl"/>
+                            <constraint firstItem="LoV-GL-ls2" firstAttribute="leading" secondItem="4N2-ci-SVx" secondAttribute="leading" constant="10" id="t4F-od-YmW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4N2-ci-SVx"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Best Scores" id="oBB-UW-ig2"/>
+                    <tabBarItem key="tabBarItem" title="Score Table" image="sportscourt" catalog="system" id="oBB-UW-ig2"/>
+                    <connections>
+                        <outlet property="tableView" destination="LoV-GL-ls2" id="Pqc-lu-2WE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kny-vL-jcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="546"/>
+            <point key="canvasLocation" x="-636.23188405797111" y="553.125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hz9-lt-aX6">
@@ -48,8 +159,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MyU-ob-8vL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.62842049870000005" green="0.11784047239999999" blue="0.29024770490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="ahq-Mr-yXv" kind="relationship" relationship="viewControllers" id="XDE-4g-9V8"/>
@@ -61,4 +174,13 @@
             <point key="canvasLocation" x="-278" y="-180"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IZ2-ZT-TT9"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="highScores" width="640" height="360"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="sportscourt" catalog="system" width="128" height="83"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
 </document>
