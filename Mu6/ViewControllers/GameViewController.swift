@@ -72,6 +72,9 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Game action handler
+    /*
+     This method handles answer/submit button behaviors, controlles answer and game timer
+     */
     @IBAction func recordingBehavior(_ sender: Any) {
         if audioEngine.isRunning{
             audioEngine.stop()
@@ -101,7 +104,9 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Speech Recognition
-    
+    /*
+     This method handles speech input actions and articulates the input
+     */
     func startRecording() {
         
         if recognitionTask != nil {
@@ -174,7 +179,9 @@ class GameViewController: UIViewController {
     }
 
     // MARK: - Random image picker
-    
+    /*
+     This method pickes a random image from a given property list
+     */
     func randomImagePicker(resource: String){
         let path = Bundle.main.path(forResource: resource, ofType: "plist")
         let dictionary = NSDictionary(contentsOfFile: path!)
@@ -184,6 +191,9 @@ class GameViewController: UIViewController {
         imageView.image = UIImage(named: pickedNote)
     }
     
+    /*
+     This method calls the random picker based on selected game level
+     */
     func callRandom(level: String){
         if level == "Level 1"{
             randomImagePicker(resource: "SolNotesList")
@@ -194,7 +204,9 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Answer check
-    
+    /*
+     This method checks if the speech input is the correct one for current note and increments score based on that
+     */
     func checkNote(note: String, ans: String){
         if (note[0].lowercased() == ans[0].lowercased()){
             score = score + 1
@@ -203,6 +215,9 @@ class GameViewController: UIViewController {
     }
     
     // MARK: - Play/Exit alert dialog
+    /*
+    This method created and presents alert dialog with exit action and play which redirects to playViewController
+    */
     @objc func openAlert(){
         let alertView = UIAlertController(title : "Game ended", message: "If u want to play again u surely can!", preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Exit", style: .default, handler:{ (_) in  exit(0) }))

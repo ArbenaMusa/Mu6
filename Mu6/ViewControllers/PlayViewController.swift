@@ -19,6 +19,7 @@ class PlayViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - Segment Control
     /*
      This function gets the selected value from segmentControl
      */

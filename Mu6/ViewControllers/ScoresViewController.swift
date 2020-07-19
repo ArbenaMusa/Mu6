@@ -45,6 +45,8 @@ extension ScoresViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreCell") as! ScoreCell
         cell.setScore(scoreModel: score)
         
+        cell.contentView.layer.cornerRadius = cell.contentView.frame.height / 3.3
+        
         return cell
     }
 }
