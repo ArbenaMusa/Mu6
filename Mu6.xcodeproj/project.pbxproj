@@ -20,6 +20,7 @@
 		FCD7A96824C319BE00EF2191 /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD7A96724C319BE00EF2191 /* ScoreCell.swift */; };
 		FCD7A96A24C35F7F00EF2191 /* SolNotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD7A96924C35F7F00EF2191 /* SolNotesList.plist */; };
 		FCD7A96C24C35FAA00EF2191 /* BassNotesList.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD7A96B24C35FAA00EF2191 /* BassNotesList.plist */; };
+		FCD7A97024C44C8900EF2191 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD7A96F24C44C8900EF2191 /* DBHelper.swift */; };
 		FCFEC9DD24BA228900795ADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC9DC24BA228900795ADC /* AppDelegate.swift */; };
 		FCFEC9DF24BA228900795ADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */; };
 		FCFEC9E124BA228900795ADC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC9E024BA228900795ADC /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 		FCD7A96724C319BE00EF2191 /* ScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		FCD7A96924C35F7F00EF2191 /* SolNotesList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SolNotesList.plist; sourceTree = "<group>"; };
 		FCD7A96B24C35FAA00EF2191 /* BassNotesList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BassNotesList.plist; sourceTree = "<group>"; };
+		FCD7A96F24C44C8900EF2191 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		FCFEC9D924BA228900795ADC /* Mu6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mu6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFEC9DC24BA228900795ADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD7A96724C319BE00EF2191 /* ScoreCell.swift */,
+				FCD7A96F24C44C8900EF2191 /* DBHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				FCFEC9E124BA228900795ADC /* ContentView.swift in Sources */,
 				FCD7A96624C3186800EF2191 /* ScoreModel.swift in Sources */,
 				F40FC10C24BCBA9400E08094 /* MainViewController.swift in Sources */,
+				FCD7A97024C44C8900EF2191 /* DBHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

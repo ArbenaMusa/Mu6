@@ -51,6 +51,9 @@
                     <tabBarItem key="tabBarItem" title="Best Scores" image="star" catalog="system" id="dkq-CU-3b8">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="highScoreLabel" destination="qnL-yy-xSO" id="3jj-BO-L98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-Ck-csN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +178,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IZ2-ZT-TT9"/>
+        <segue reference="SE4-Oj-fMf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="highScores" width="640" height="360"/>

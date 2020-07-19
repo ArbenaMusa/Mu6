@@ -12,29 +12,11 @@ import SQLite3
 class PlayViewController: UIViewController {
 
     // MARK: - Initializations
-    var db: OpaquePointer?
-    
     var level: Int = 1
     
     // MARK: - Play main
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let fileUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Mu6Database.sqlite")
-        
-        if sqlite3_open(fileUrl.path, &db) != SQLITE_OK{
-            print("Error on opening database!")
-            return
-        }
-        
-        let createTableQuery = "CREATE TABLE IF NOT EXISTS Scores (id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER)"
-        
-        if sqlite3_exec(db, createTableQuery, nil, nil, nil) != SQLITE_OK {
-            print("Error on creating table!")
-            return
-        }
-        
-        // Do any additional setup after loading the view.
     }
     
     /*

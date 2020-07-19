@@ -12,6 +12,10 @@ class BestScoresViewController: UIViewController {
 
     // MARK: - BestScores main
 
+    let db = DBHelper()
+    
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -30,6 +30,8 @@ class GameViewController: UIViewController {
     var pickedNote = String()
     var times: Int = 0
     
+    let db = DBHelper()
+    
     // MARK: - Game main
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +81,9 @@ class GameViewController: UIViewController {
             answerBtn.setTitle("Answer", for: .normal)
             answerLabel.text = ""
             callRandom(level: labelText)
-            if(times > 1){
+            if(times > 5){
+                print(String(score))
+                self.db.insert(score: score)
                 scoreLabel.text = "Game ended with " + String(score) + " scores!"
                 if(score == 0){
                     imageView.image = UIImage(named: "over")
