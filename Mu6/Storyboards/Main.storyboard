@@ -287,6 +287,7 @@
                         <outlet property="answerLabel" destination="Sk2-MB-e7D" id="MST-r5-jZz"/>
                         <outlet property="imageView" destination="fkX-ho-0LR" id="g3E-2k-nMX"/>
                         <outlet property="levelLabel" destination="N2F-Cb-XIT" id="Byw-79-eL5"/>
+                        <outlet property="scoreLabel" destination="CO9-UM-WZg" id="6Sv-R4-vGT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dip-9G-gWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +296,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="seu-eq-Kdr"/>
+        <segue reference="V8D-ag-YOr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="music.mic" catalog="system" width="128" height="118"/>

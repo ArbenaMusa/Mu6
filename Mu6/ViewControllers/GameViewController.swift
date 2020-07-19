@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answerBtn: UIButton!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var labelText = String()
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US")) //1
@@ -22,6 +23,11 @@ class GameViewController: UIViewController {
     private var recognitionTask: SFSpeechRecognitionTask?
     private var audioEngine = AVAudioEngine()
     var lang: String = "en-US"
+    
+    var score: Int = 0
+    var answer = String()
+    var pickedNote = String()
+    var times: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,16 +68,30 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func recordingBehavior(_ sender: Any) {
-        if audioEngine.isRunning {
+        if audioEngine.isRunning{
             audioEngine.stop()
             recognitionRequest?.endAudio()
             answerBtn.isEnabled = false
+            checkNote(note: pickedNote, ans: answer)
             answerBtn.setTitle("Answer", for: .normal)
             answerLabel.text = ""
             callRandom(level: labelText)
+            if(times > 1){
+                scoreLabel.text = "Game ended with " + String(score) + " scores!"
+                if(score == 0){
+                    imageView.image = UIImage(named: "over")
+                }
+                else{
+                    imageView.image = UIImage(named: "win")
+                }
+                answerBtn.setTitle("End it", for: .normal)
+                answerBtn.addTarget(self, action: #selector(openAlert), for: .touchUpInside)
+            }
         } else {
             startRecording()
             answerBtn.setTitle("Submit", for: .normal)
+            times = times + 1
+            print(times)
         }
     }
     
@@ -107,6 +127,8 @@ class GameViewController: UIViewController {
             
             if result != nil {
                 self.answerLabel.text = result?.bestTranscription.formattedString
+                self.answer = String(self.answerLabel.text!)
+                print(self.answer)
                 isFinal = (result?.isFinal)!
             }
             
@@ -150,8 +172,8 @@ class GameViewController: UIViewController {
         let dictionary = NSDictionary(contentsOfFile: path!)
         
         let data = dictionary?.object(forKey: "Images") as! [String]
-        
-        imageView.image = UIImage(named: data.randomElement()!)
+        pickedNote = data.randomElement()!
+        imageView.image = UIImage(named: pickedNote)
     }
     
     func callRandom(level: String){
@@ -161,6 +183,28 @@ class GameViewController: UIViewController {
         else if level == "Level 2"{
             randomImagePicker(resource: "BassNotesList")
         }
+    }
+    
+    func checkNote(note: String, ans: String){
+        if (note[0].lowercased() == ans[0].lowercased()){
+            score = score + 1
+            scoreLabel.text = String(score)
+        }
+    }
+    
+    @objc func openAlert(){
+        let alertView = UIAlertController(title : "Game ended", message: "If u want to play again u surely can!", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Exit", style: .default, handler:{ (_) in  exit(0) }))
+        alertView.addAction(UIAlertAction(title: "Play", style: .default, handler:{ (_) in
+            self.dismiss(animated: true, completion: nil)
+            self.presentMain()
+        }))
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func presentMain(){
+        let main = PlayViewController()
+        self.present(main, animated: true, completion: nil)
     }
 
     /*
@@ -173,4 +217,9 @@ class GameViewController: UIViewController {
     }
     */
 
+}
+extension StringProtocol{
+    subscript(offset: Int) -> Character{
+        self[index(startIndex, offsetBy: offset)]
+    }
 }
