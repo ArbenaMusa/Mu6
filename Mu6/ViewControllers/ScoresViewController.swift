@@ -10,9 +10,13 @@ import UIKit
 
 class ScoresViewController: UIViewController {
 
+    // MARK: - Initializations
+    
     var scores: [ScoreModel] = []
     
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Score main
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,8 @@ class ScoresViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Score generation
     
     func getScores() -> [ScoreModel]{
         var tempScores: [ScoreModel] = []
@@ -41,19 +47,9 @@ class ScoresViewController: UIViewController {
         return tempScores
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+// MARK: - DataSource/ViewDelegate extension
 extension ScoresViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

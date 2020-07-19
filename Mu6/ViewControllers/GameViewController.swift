@@ -11,6 +11,7 @@ import Speech
 
 class GameViewController: UIViewController {
 
+    // MARK: - Initializations
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var answerBtn: UIButton!
     @IBOutlet weak var answerLabel: UILabel!
@@ -29,19 +30,20 @@ class GameViewController: UIViewController {
     var pickedNote = String()
     var times: Int = 0
     
+    // MARK: - Game main
     override func viewDidLoad() {
         super.viewDidLoad()
         levelLabel.text = labelText
         callRandom(level: labelText)
         
-        answerBtn.isEnabled = false  //2
-        speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate  //3
+        answerBtn.isEnabled = false
+        speechRecognizer?.delegate = self as? SFSpeechRecognizerDelegate
         speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: lang))
-        SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
+        SFSpeechRecognizer.requestAuthorization { (authStatus) in
             
             var isButtonEnabled = false
             
-            switch authStatus {  //5
+            switch authStatus { 
             case .authorized:
                 isButtonEnabled = true
                 
@@ -67,6 +69,7 @@ class GameViewController: UIViewController {
 
     }
     
+    // MARK: - Game action handler
     @IBAction func recordingBehavior(_ sender: Any) {
         if audioEngine.isRunning{
             audioEngine.stop()
@@ -91,9 +94,10 @@ class GameViewController: UIViewController {
             startRecording()
             answerBtn.setTitle("Submit", for: .normal)
             times = times + 1
-            print(times)
         }
     }
+    
+    // MARK: - Speech Recognition
     
     func startRecording() {
         
@@ -128,7 +132,6 @@ class GameViewController: UIViewController {
             if result != nil {
                 self.answerLabel.text = result?.bestTranscription.formattedString
                 self.answer = String(self.answerLabel.text!)
-                print(self.answer)
                 isFinal = (result?.isFinal)!
             }
             
@@ -167,6 +170,8 @@ class GameViewController: UIViewController {
         }
     }
 
+    // MARK: - Random image picker
+    
     func randomImagePicker(resource: String){
         let path = Bundle.main.path(forResource: resource, ofType: "plist")
         let dictionary = NSDictionary(contentsOfFile: path!)
@@ -185,6 +190,8 @@ class GameViewController: UIViewController {
         }
     }
     
+    // MARK: - Answer check
+    
     func checkNote(note: String, ans: String){
         if (note[0].lowercased() == ans[0].lowercased()){
             score = score + 1
@@ -192,6 +199,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    // MARK: - Play/Exit alert dialog
     @objc func openAlert(){
         let alertView = UIAlertController(title : "Game ended", message: "If u want to play again u surely can!", preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Exit", style: .default, handler:{ (_) in  exit(0) }))
@@ -206,18 +214,10 @@ class GameViewController: UIViewController {
         let main = PlayViewController()
         self.present(main, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+// MARK: - String indexing extension
+
 extension StringProtocol{
     subscript(offset: Int) -> Character{
         self[index(startIndex, offsetBy: offset)]

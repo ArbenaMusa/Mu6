@@ -10,13 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    // MARK: - Initializations
     @IBOutlet weak var showAlertButton: UIButton!
+    
+    // MARK: - Main main
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         showAlertButton.addTarget(self, action: #selector(showAlert), for: .touchUpInside)
     }
     
+    // MARK: - Description alert dialog
     /*
      This method created and presents alert dialog
      */
@@ -28,15 +32,5 @@ class MainViewController: UIViewController {
         
         self.present(alertView, animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

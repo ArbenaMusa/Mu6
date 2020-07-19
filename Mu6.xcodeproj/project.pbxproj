@@ -92,6 +92,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		FCD7A96D24C447BC00EF2191 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCD7A96724C319BE00EF2191 /* ScoreCell.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FCFEC9D024BA228900795ADC = {
 			isa = PBXGroup;
 			children = (
@@ -111,11 +119,11 @@
 		FCFEC9DB24BA228900795ADC /* Mu6 */ = {
 			isa = PBXGroup;
 			children = (
+				FCD7A96D24C447BC00EF2191 /* Utils */,
 				F4FB45EF24C1E0D00094AACB /* Models */,
 				F4FB45EE24C1E0830094AACB /* ViewControllers */,
 				F4FB45EB24C1DB770094AACB /* Storyboards */,
 				FCFEC9DC24BA228900795ADC /* AppDelegate.swift */,
-				FCD7A96724C319BE00EF2191 /* ScoreCell.swift */,
 				FCFEC9DE24BA228900795ADC /* SceneDelegate.swift */,
 				FCFEC9E024BA228900795ADC /* ContentView.swift */,
 				FC35981324C0E3CF00210B92 /* VCSwiftUIView.swift */,
