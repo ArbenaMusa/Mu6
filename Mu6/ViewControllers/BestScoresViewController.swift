@@ -19,6 +19,11 @@ class BestScoresViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let highestScore = db.getHighest()
+        
+        if(highestScore > 0){
+            highScoreLabel.text = String(highestScore)
+        }
         // Do any additional setup after loading the view.
     }
 

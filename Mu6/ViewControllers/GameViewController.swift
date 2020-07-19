@@ -82,7 +82,6 @@ class GameViewController: UIViewController {
             answerLabel.text = ""
             callRandom(level: labelText)
             if(times > 5){
-                print(String(score))
                 self.db.insert(score: score)
                 scoreLabel.text = "Game ended with " + String(score) + " scores!"
                 if(score == 0){

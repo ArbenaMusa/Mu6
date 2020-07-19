@@ -38,7 +38,7 @@ class DBHelper{
     // MARK: - Table creation
     
     func createTable(){
-        let query = "CREATE TABLE IF NOT EXISTS Scores(id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER);"
+        let query = "CREATE TABLE IF NOT EXISTS Scores(id INTEGER PRIMARY KEY AUTOINCREMENT, score INTEGER)"
         
         var statement: OpaquePointer? = nil
         
@@ -58,13 +58,15 @@ class DBHelper{
     // MARK: - Data insertion
     
     func insert(score: Int){
-        let query = "INSERT INTO Scores(score) VALUES (?);"
+        let query = "INSERT INTO Scores(score) VALUES (?)"
         
         var statement: OpaquePointer? = nil
         
         if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
             sqlite3_bind_int(statement, 1, Int32(score))
         
+            print(String(score))
+            
             if sqlite3_step(statement) == SQLITE_DONE {
                 print("Data has been inserted successfully!")
             }
@@ -82,7 +84,7 @@ class DBHelper{
     func read() -> [ScoreModel]{
         var list = [ScoreModel]()
         
-        let query = "SELECT * FROM Scores;"
+        let query = "SELECT * FROM Scores"
         
         var statement: OpaquePointer? = nil
         
@@ -97,5 +99,23 @@ class DBHelper{
             }
         }
         return list
+    }
+    
+    // MARK: - Data maximum
+    
+    func getHighest() -> Int{
+        var highestScore = 0
+        
+        let query = "SELECT MAX(score) FROM Scores"
+        
+        var statement: OpaquePointer? = nil
+        
+        if sqlite3_prepare_v2(db, query, -1, &statement, nil) == SQLITE_OK {
+            if sqlite3_step(statement) == SQLITE_ROW {
+                let score = Int(sqlite3_column_int(statement, 0))
+                highestScore = score
+            }
+        }
+        return highestScore
     }
 }
